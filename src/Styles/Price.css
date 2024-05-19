@@ -1,0 +1,21 @@
+/* styles/Price.css */
+.Price {
+  padding: 50px;
+  text-align: center;
+}
+
+.Price h2 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", serif; /* Шрифт із засічками */
+}
+
+.Price ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+.Price li {
+  margin: 10px 0;
+}

@@ -1,0 +1,8 @@
+.App {
+  font-family: "Arial", sans-serif; /* Встановіть основний шрифт */
+  background-color: #1e1e1e; /* Темний фон */
+  color: white; /* Білий текст */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,20 @@
+.Header {
+  text-align: center;
+  padding: 100px 0;
+  background-image: url("path/to/your/background-image.jpg"); /* Шлях до фонової картинки */
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.Header h1 {
+  font-size: 6em; /* Великий розмір тексту */
+  font-family: "Times New Roman", serif; /* Шрифт із засічками */
+  margin: 0;
+}
+
+.Header p {
+  font-size: 2em; /* Розмір для слогана */
+  font-family: "Arial", sans-serif; /* Основний шрифт */
+  margin: 10px 0 0;
+}

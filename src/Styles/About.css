@@ -1,0 +1,29 @@
+/* styles/About.css */
+.About {
+  padding: 50px;
+  text-align: center;
+}
+
+.About h2 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", serif; /* Шрифт із засічками */
+}
+
+.About p {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.about-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about-images img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}

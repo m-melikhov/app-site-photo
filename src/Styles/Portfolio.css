@@ -1,0 +1,17 @@
+/* styles/Portfolio.css */
+.Portfolio {
+  padding: 50px;
+}
+
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.portfolio-gallery img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}

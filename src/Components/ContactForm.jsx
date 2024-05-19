@@ -5,7 +5,7 @@ import '../Styles/ConcactForm.css';
 
 export default function ContactForm() {
   const TOKEN = "7111363762:AAEf795-szr9fGDGwjVJvBLcrTjQ2zQKaE8";
-  const CHAT_ID = "7102789163";
+  const CHAT_ID = "258824107";
   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
   const [successMessage, setSuccessMessage] = useState("");

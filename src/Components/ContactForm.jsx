@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../Styles/ContactForm.css'; // Виправлений шлях до стилів
+import '../Styles/ConcactForm.css';
 
 export default function ContactForm() { // Виправлена назва компонента
   const TOKEN = "7111363762:AAEf795-szr9fGDGwjVJvBLcrTjQ2zQKaE8";

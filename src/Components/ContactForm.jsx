@@ -4,8 +4,8 @@ import axios from 'axios';
 import '../Styles/ConcactForm.css';
 
 export default function ContactForm() {
-  const TOKEN = "7111363762:AAEf795-szr9fGDGwjVJvBLcrTjQ2zQKaE8";
-  const CHAT_ID = "258824107";
+  const TOKEN = "6792552927:AAEpRS9u0jwsemwtXVofm6aWnuoEg77dhO0";
+  const CHAT_ID = "-1002146868687";
   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
   const [successMessage, setSuccessMessage] = useState("");

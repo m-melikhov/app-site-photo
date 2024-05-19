@@ -3,26 +3,23 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../Styles/ConcactForm.css';
 
-export default function ContactForm() { // Виправлена назва компонента
+export default function ContactForm() {
   const TOKEN = "7111363762:AAEf795-szr9fGDGwjVJvBLcrTjQ2zQKaE8";
   const CHAT_ID = "7102789163";
   const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [instagram, setInstagram] = useState('');
-  const [comment, setComment] = useState('');
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     let message = `<b>Заявка с сайта!</b>\n`;
-    message += `<b>Імʼя: </b> ${name}\n`;
-    message += `<b>Номер телефону: </b> ${phone}\n`;
-    message += `<b>Інстаграм: </b> ${instagram}\n`;
-    message += `<b>Повідомлення: </b> ${comment}`;
+    message += `<b>Імʼя: </b> ${e.target.name.value}\n`;
+    message += `<b>Номер телефону: </b> ${e.target.tel.value}\n`;
+    message += `<b>Iнстаграм: </b> ${e.target.inst.value}\n`;
+    message += `<b>Повідомлення: </b> ${e.target.textarea.value}`;
 
+    // eslint-disable-next-line no-undef
     axios
       .post(URI_API, {
         chat_id: CHAT_ID,
@@ -31,15 +28,14 @@ export default function ContactForm() { // Виправлена назва ко�
       })
       // eslint-disable-next-line no-unused-vars
       .then((res) => {
-        setName('');
-        setPhone('');
-        setInstagram('');
-        setComment('');
+        e.target.name.value = "";
+        e.target.tel.value = "";
+        e.target.inst.value = "";
+        e.target.textarea.value = "";
         setSuccessMessage("Повідомлення надіслано");
       })
       .catch((err) => {
         console.warn(err);
-        setSuccessMessage("Помилка відправки повідомлення.");
       });
   };
 
@@ -49,19 +45,19 @@ export default function ContactForm() { // Виправлена назва ко�
       <form onSubmit={handleSubmit}>
         <label>
           Імʼя:
-          <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} required />
+          <input type="text" name="name" />
         </label>
         <label>
           Телефон:
-          <input type="tel" name="tel" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+          <input type="tel" name="tel" />
         </label>
         <label>
           Інстаграм:
-          <input type="text" name="inst" value={instagram} onChange={(e) => setInstagram(e.target.value)} required />
+          <input type="text" name="inst" />
         </label>
         <label>
           Коментар:
-          <textarea name="textarea" value={comment} onChange={(e) => setComment(e.target.value)} required />
+          <textarea name="textarea" />
         </label>
         <button type="submit">Надіслати</button>
       </form>
